@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 var CharacterSchema = new mongoose.Schema({
   name: String,
   planet: String,
-  forceUser: { type: Boolean, "default": false }
+  forceUser: {type: Boolean, "default": false}
 });
 
 // //example

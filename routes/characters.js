@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 // Restful API
 
 // Get all
-controller.get('/', function(req, res, next) {
+router.get('/', function(req, res, next) {
   charModel.find(function(error, characters) {
     if (error) return error;
     res.json(characters);
@@ -15,7 +15,7 @@ controller.get('/', function(req, res, next) {
 });
 
 // Get by id
-controller.get('/:id', function(req, res, next) {
+router.get('/:id', function(req, res, next) {
   charModel.findById(req.params.id, function(error, character) {
     if (error) return error;
     res.json(character);
@@ -23,7 +23,7 @@ controller.get('/:id', function(req, res, next) {
 });
 
 // Create
-controller.post('/', function(req, res, next) {
+router.post('/', function(req, res, next) {
   charModel.create(req.body, function(error, character) {
     if (error) return error;
     res.json(character);
@@ -31,13 +31,13 @@ controller.post('/', function(req, res, next) {
 });
 
 // Update by id
-controller.put('/:id', function(req, res, next) {
+router.put('/:id', function(req, res, next) {
   charModel.findByIdAndUpdate(req.params.id, req.body, function(error, character) {
     if (error) return error;
     res.json(character);
   })
 });
-controller.patch('/:id', function(req, res, next) {
+router.patch('/:id', function(req, res, next) {
   charModel.findByIdAndUpdate(req.params.id, req.body, function(error, character) {
     if (error) return error;
     res.json(character);
@@ -45,7 +45,7 @@ controller.patch('/:id', function(req, res, next) {
 });
 
 // Delete by id
-controller.delete('/:id', function(req, res, next) {
+router.delete('/:id', function(req, res, next) {
   charModel.findByIdAndRemove(req.params.id, req.body, function(error, character) {
     if (error) return error;
     res.json({
