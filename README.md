@@ -1,5 +1,8 @@
 # node_API
-Node API using Express framework and Backbone.js to render the front end. <br>
+* Part 1: Created Node API using Express framework.
+* Part 2: Created Backbone.js to render the front end.
+* Part 3: Created Angular.js to render the front end.
+
 
 ## Technologies used
 * Node.js
@@ -7,6 +10,7 @@ Node API using Express framework and Backbone.js to render the front end. <br>
 * Backbone.js
 * Handlebars
 * Mongo.db
+* Angular.js
 
 ## Steps
 
